@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expense History</title>
+  <link rel="stylesheet" href="output.css" />
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+  </style>
+</head>
+
+<body class="font-[Roboto] text-[#FFFF] bg-[#1F1C2C]">
+  <!--navbar-->
+  <header class="bg-[#2A2D4D] flex justify-center mx-auto p-6 rounded-b-4xl shadow-lg">
+    <div class="flex mx-auto text-3xl font-extrabold">
+      <p>HISTORY</p>
+    </div>
+      <button
+        class="bg-[#3EB489] text-[#FFFFFF] hover:bg-[#4c8872] text-lg rounded-3xl p-1 px-3 cursor-pointer transition"
+        onclick="window.goBack();"
+        >
+        Go Back
+      </button>
+  </header>
+
+  <!--clear all button-->
+  <div class="flex justify-end p-8 ">
+    <button class="bg-red-700 text-white hover:bg-red-500 text-lg  rounded-lg p-1 px-4 cursor-pointer transition"
+    onclick="window.deleteHistory();"
+    >
+      Clear All
+    </button>
+  </div>
+  <div class="grid grid-cols-1 gap-8 p-4 text-2xl display-history">
+    <!-- <div class="grid sm:grid-cols-4 gap-6 grid-rows-1 justify-items-center border h-auto rounded-2xl p-4 ">
+      <p>Home</p>
+      <p class="break-words">Description</p>
+      <p>Amount</p>
+      <p>Date</p>
+    </div> -->
+     <!-- <div class="grid sm:grid-cols-4 gap-6 grid-cols-1 justify-items-center h-auto border rounded-2xl p-4">
+      <p>Home</p>
+      <p class="break-words">Description</p>
+      <p>Amount</p>
+      <p>Date</p>
+      <button>delete</button>
+    </div>
+    <div class="grid sm:grid-cols-4 gap-6 grid-cols-1 justify-items-center h-auto border rounded-2xl p-4">
+      <p>Home</p>
+      <p class="break-words">Description</p>
+      <p>Amount</p>
+      <p>Date</p>
+      <button>delete</button>
+    </div> -->
+  </div>
+  
+  
+  
+  
+  
+  <div class="flex justify-center display-nohistory">
+    <!-- <p class="text-3xl">No History Available!</p> -->
+  </div>
+  <script type="module" src="scripts/expense-history.js"></script>
+</body>
+
+</html>

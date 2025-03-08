@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expense Details</title>
+  <link rel="stylesheet" href="output.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <style>
+    @import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+  </style>
+</head>
+
+<body class="font-[Roboto] bg-[#F5EEE6] text-[#3E3232]">
+  <!--navbar-->
+  <header class="flex bg-[#4D4C7D] w-full justify-center mx-auto p-6 shadow-lg">
+    <div class="hidden md:flex space-x-4 text-3xl">
+      <a href="index.html">
+        <i class="fa-solid fa-arrow-left text-white"></i>
+      </a>
+    </div>
+    <div class="flex mx-auto text-3xl font-extrabold text-white">
+      <p>TRACK YOUR EXPENSES</p>
+    </div>
+    <div class="hidden md:flex space-x-4">
+      <a href="expense-history.html"><button
+          class="bg-[#D04848] text-white hover:bg-[#B94141] text-lg rounded-3xl p-1 px-2 cursor-pointer transition">
+          Expense History
+        </button></a>
+    </div>
+    <button id="three-lines"
+      class="md:hidden hover:text-white cursor-pointer  hover:bg-[#D04848] p-1 rounded-lg">
+      <i class="fa-solid fa-bars text-2xl text-white"></i>
+    </button>
+  </header>
+
+  <!--this is for mobile-->
+  <ul id="mobile" class="hidden md:hidden border-t-2">
+    <a href="index.html">
+      <li
+        class="bg-[#D04848] text-white hover:bg-[#B94141] flex justify-center text-lg p-2 px-3 cursor-pointer transition">
+        Go Back
+      </li>
+    </a>
+    <a href="expense-history.html">
+      <li
+        class="bg-[#D04848] text-white hover:bg-[#B94141] flex justify-center text-lg p-2 px-3 cursor-pointer transition">
+        Expense History
+      </li>
+    </a>
+  </ul>
+
+  <div class="flex justify-center pt-6 md:pt-10">
+    <div class=" focus:ring-2 focus:ring-[#8E7AB5] w-80 md:w-md bg-[#F9F5E7] shadow-2xl rounded-b-2xl">
+      <!--this is for outer border-->
+      <div class="flex justify-center rounded-b-md shadow-md bg-[#4D4C7D] text-white p-2 display-Expense">
+        <!--this is for the main heading-->
+        <!--<p class="p-4 text-2xl">This Month Expenses</p>-->
+      </div>
+      <div class="grid grid-cols-2 p-6 gap-4 md:gap-8 text-center justify-items-center text-lg text-[#3E3232] obj-details">
+        <!--<p>This Month Limit :</p>
+          <p>200</p>
+          <p>Total Expenses :</p>
+          <p>100</p>
+          <p>Remaining Amount :</p>
+          <p>100</p>
+          <p>Status :</p>
+          <p>Good</p>-->
+
+      </div>
+      <div class="flex flex-col items-center p-8 space-y-4">
+        <input type="text" placeholder="Enter Description"
+          class="text-black text-lg focus:ring-1 focus:ring-[#D04848] p-2 rounded-lg md:w-sm w-65 outline-none bg-[#FFFFFF] description-value" 
+          onkeydown="window.enterByData(event);"
+          />
+        <input type="text" placeholder="Enter amount" inputmode="numeric" pattern="[0-9]*"
+          class="text-lg text-black focus:ring-1 focus:ring-[#D04848] bg-[#FFFFFF] outline-none p-2 rounded-lg w-65 md:w-sm amount-value" 
+          onkeydown="window.enterByData(event);"
+          />
+        <button class="hover:bg-[#3C5B6F] bg-[#468B97] text-white p-2 px-3 rounded-3xl cursor-pointer transition"
+          onclick="saveExpenseData();">
+          Add Expense
+        </button>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="scripts/expense-det.js"></script>
+
+</body>
+
+</html>
